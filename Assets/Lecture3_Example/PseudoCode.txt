@@ -1,0 +1,17 @@
+
+Soldier : MonoBehaviour
+    - Health
+    - Damage
+    - AttackDistance
+    - Target
+    - Attack()
+    - GetDamage( dmg )
+    
+    
+    SwordsMan : Soldier
+        - Armor
+        - GetDamage( dmg )
+    
+    Archer : Soldi  er
+        - arrowCount
+        - Attack()

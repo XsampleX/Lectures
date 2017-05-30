@@ -1,33 +1,36 @@
 ﻿using UnityEngine;
 
-public class Lecture2Example : MonoBehaviour
+namespace Lecture2
 {
-    soldier mysoldier;
-	void Start ()
+    public class Lecture2Example : MonoBehaviour
     {
-        mysoldier = new archer();
-        mysoldier.attack();
-	}
-}
-
-public class soldier
-{
-    public int health;
-    public int damage;
-    public virtual void attack()
-    {
-        Debug.Log("soldier is attacking!!!");
+        soldier mysoldier;
+        void Start()
+        {
+            mysoldier = new archer();
+            mysoldier.attack();
+        }
     }
-}
-public class archer : soldier
-{
-   public override void attack()
-    {
-        //base.attack();
-        Debug.Log("archer is shooting!");
-    }
-}
-public class swordsman : soldier
-{
 
+    public class soldier
+    {
+        public int health;
+        public int damage;
+        public virtual void attack()
+        {
+            Debug.Log("soldier is attacking!!!");
+        }
+    }
+    public class archer : soldier
+    {
+        public override void attack()
+        {
+            //base.attack();
+            Debug.Log("archer is shooting!");
+        }
+    }
+    public class swordsman : soldier
+    {
+
+    }
 }
